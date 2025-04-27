@@ -1,6 +1,6 @@
 # Sistema de Geração de Contratos
 
-Este sistema foi desenvolvido para automatizar a geração de contratos em PDF de forma eficiente e personalizada.
+Este sistema foi desenvolvido para automatizar a geração de contratos em PDF e gerenciar diversas operações comerciais de forma eficiente e personalizada.
 
 ## Requisitos
 
@@ -11,12 +11,14 @@ Este sistema foi desenvolvido para automatizar a geração de contratos em PDF d
   - php-mbstring
   - php-dom
   - php-gd
+  - php-pdo
+  - php-mysql
 
 ## Instalação
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/waneesa.git
+git clone https://github.com/alvesdmt/waneesa.git
 ```
 
 2. Instale as dependências via Composer:
@@ -45,29 +47,80 @@ chmod 755 -R logs/
 
 ## Funcionalidades
 
+### Gestão de Contratos
 - Geração automatizada de contratos em PDF
 - Interface administrativa para gestão de modelos
-- Sistema de login seguro
-- Logs de atividades
 - Personalização de templates
+
+### Gestão de Produtos
+- Cadastro e gerenciamento de produtos
+- Controle de estoque
+- Geração de etiquetas de produtos
+- Upload de imagens dos produtos
+- Geração automática de código de barras
+
+### Gestão de Vendas
+- Registro de vendas
+- Controle de caixa
+- Abertura e fechamento de caixa
+- Registro de movimentações financeiras
+- Relatórios de vendas
+
+### Gestão de Carnês
+- Cadastro de carnês
+- Controle de parcelas
+- Registro de pagamentos
+- Acompanhamento de parcelas em atraso
+- Geração de carnês em PDF
+
+### Gestão de Funcionários
+- Cadastro de funcionários
+- Controle de permissões (Admin/Funcionário)
+- Gestão de acessos
+- Registro de atividades
+
+### Segurança
+- Sistema de login seguro
+- Autenticação de usuários
+- Proteção contra CSRF
+- Validação de inputs
+- Logs de atividades
+- Controle de permissões por tipo de usuário
+
+### Outras Funcionalidades
+- Dashboard com indicadores principais
+- Catálogo de produtos
+- Sistema de busca avançada
+- Integração com API de CEP
+- Formatação automática de dados (CPF, telefone, etc.)
+- Geração de relatórios financeiros
 
 ## Uso
 
 1. Acesse o sistema através do navegador
 2. Faça login com suas credenciais
-3. Navegue até a seção de contratos
-4. Selecione ou crie um novo modelo
-5. Preencha os dados necessários
-6. Gere o PDF
+3. Navegue pelo menu lateral para acessar as diferentes funcionalidades:
+   - Dashboard: Visão geral do sistema
+   - Caixa: Gestão de caixa
+   - Produtos: Gestão de produtos
+   - Vendas: Registro de vendas
+   - Carnês: Gestão de carnês
+   - Funcionários: Gestão de funcionários (apenas admin)
+   - Compras: Gestão de compras (apenas admin)
+   - Catálogo: Visualização de produtos
 
 ## Segurança
 
 O sistema implementa várias medidas de segurança:
-- Autenticação de usuários
+- Autenticação de usuários com senhas criptografadas
 - Proteção contra CSRF
 - Validação de inputs
 - Logs de atividades
+- Controle de permissões por tipo de usuário
+- Proteção contra SQL Injection
+- Validação de sessões
+- Sanitização de dados
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes. # waneesa
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
